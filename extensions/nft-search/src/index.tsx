@@ -25,6 +25,10 @@ function SearchListItem({ searchResult }: { searchResult: SearchResult }) {
         <ActionPanel>
           <ActionPanel.Section>
             <Action.OpenInBrowser title="Open in Genie" url={searchResult.url} />
+            <Action.OpenInBrowser
+              title="Open in Opensea"
+              url={"https://opensea.io/assets?search%5Bquery%5D=" + searchResult.name.toLowerCase()}
+            />
           </ActionPanel.Section>
           <ActionPanel.Section>
             <Action.CopyToClipboard
